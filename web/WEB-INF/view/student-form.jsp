@@ -1,0 +1,30 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: vyom
+  Date: 09/06/21
+  Time: 6:05 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+<form:form action="processForm" modelAttribute="student">
+
+    First name: <form:input path="firstName" />
+    <!-- path="firstName" will call getFirstName, it will
+    result null if we dont have anything -->
+    <br><br>
+    Last name: <form:input path="lastName" />
+    <br><br>
+
+    <input type="submit" value="Submit" />
+    <!-- Submit will call the respective setter methods and set the fields -->
+</form:form>
+
+</body>
+</html>
