@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Student Registration Form</title>
@@ -35,6 +36,14 @@
     PHP <form:radiobutton path="favouriteLanguage" value="PHP"/>
     C# <form:radiobutton path="favouriteLanguage" value="C#"/>
     Ruby <form:radiobutton path="favouriteLanguage" value="Ruby"/>
+    <br><br>
+
+    Operating Systems:
+    <br><br>
+    Linux <from:checkbox path="operatingSystems" value="Linux" />
+    Mac OS <from:checkbox path="operatingSystems" value="Mac OS" />
+    Windows <from:checkbox path="operatingSystems" value="Windows" />
+
     <br><br>
 
     <input type="submit" value="Submit"/>
