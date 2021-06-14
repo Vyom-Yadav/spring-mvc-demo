@@ -23,10 +23,19 @@
     <br><br>
     Country: <form:select path="country">
     <form:options items="${student.countryOptions}"/>
-  <%--  <form:option value="India" label="INR"/>
-    <form:option value="America" label="USA"/>
-    <form:option value="Portugal" label="POR"/>--%>
+    <%--  <form:option value="India" label="INR"/>
+      <form:option value="America" label="USA"/>
+      <form:option value="Portugal" label="POR"/>--%>
 </form:select>
+    <br><br>
+    Favourite Language:
+    <br><br>
+
+    Java <form:radiobutton path="favouriteLanguage" value="Java"/>
+    PHP <form:radiobutton path="favouriteLanguage" value="PHP"/>
+    C# <form:radiobutton path="favouriteLanguage" value="C#"/>
+    Ruby <form:radiobutton path="favouriteLanguage" value="Ruby"/>
+    <br><br>
 
     <input type="submit" value="Submit"/>
     <!-- Submit will call the respective setter methods and set the fields -->
