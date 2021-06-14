@@ -15,14 +15,20 @@
 
 <form:form action="processForm" modelAttribute="student">
 
-    First name: <form:input path="firstName" />
+    First name: <form:input path="firstName"/>
     <!-- path="firstName" will call getFirstName, it will
     result null if we dont have anything -->
     <br><br>
-    Last name: <form:input path="lastName" />
+    Last name: <form:input path="lastName"/>
     <br><br>
+    Country: <form:select path="country">
+    <form:options items="${student.countryOptions}"/>
+  <%--  <form:option value="India" label="INR"/>
+    <form:option value="America" label="USA"/>
+    <form:option value="Portugal" label="POR"/>--%>
+</form:select>
 
-    <input type="submit" value="Submit" />
+    <input type="submit" value="Submit"/>
     <!-- Submit will call the respective setter methods and set the fields -->
 </form:form>
 
