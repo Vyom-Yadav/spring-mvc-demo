@@ -13,7 +13,9 @@
 </head>
 <body>
 
-Customer is confirmed: ${customer.firstName} ${customer.lastName}
+Customer is confirmed: ${customer.firstName} ${customer.lastName} with ${customer.freePasses} free passes.
+<br><br>
+Postal Code: ${customer.postalCode}
 
 </body>
 </html>

@@ -18,6 +18,7 @@ public class CustomerController {
     // add an initbinder .. to convert trim input Strings
     // remove leading and trailing whitespace
     // resolve issue for out validation
+    // It pre processes all the web requests to our controller.
 
     @InitBinder
     public void initBinder(WebDataBinder dataBinder) {
@@ -38,7 +39,9 @@ public class CustomerController {
             @Valid @ModelAttribute("customer") Customer theCustomer,
             BindingResult theBindingResult
     ) {
-        System.out.println("Last Name: |"+theCustomer.getLastName()+"|");
+        System.out.println("Last Name: |" + theCustomer.getLastName() + "|");
+
+        System.out.println("Binding result: " + theBindingResult);
         if (theBindingResult.hasErrors()) {
             return "customer-form";
         } else {
